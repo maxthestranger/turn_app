@@ -1,21 +1,45 @@
-<form action='admin' method='POST' class='container-xl'>
-  <div class='form-group mb-3'>
-    <label for='username'></label>
-    <input
-      id='username'
-      name='username'
-      class='form-control'
-      placeholder='Enter your username..'
-    />
+<main class='main-content mt-0'>
+  <div
+    class='page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg'
+    style="background-image: url('images/bgs/login.jpg');"
+  >
+    <span class='mask bg-gradient-dark opacity-6'></span>
   </div>
-  <div class='form-group mb-3'>
-    <label for='password'></label>
-    <input
-      id='password'
-      name='password'
-      class='form-control'
-      placeholder='Enter your password..'
-    />
+
+  <div class='container'>
+    <div class='row mt-lg-n10 mt-md-n11 mt-n10 justify-content-center'>
+      <div class='col-xl-4 col-lg-5 col-md-7 mx-auto'>
+        <div class='card py-lg-3'>
+          <div class='card-body text-center'>
+            <div class='info mb-4'>
+              <img
+                class='avatar avatar-xxl'
+                alt='Image placeholder'
+                src='images/logo.png'
+              />
+            </div>
+            <h4 class='mb-0 font-weight-bolder'>TurnApp Admin</h4>
+            <p class='mb-4'>Enter password to unlock the account.</p>
+            <form role='form' method='POST' action='admin/login'>
+              <div class='mb-3'>
+                <input
+                  type='password'
+                  class='form-control'
+                  placeholder='Password'
+                  aria-label='password'
+                  name='password'
+                />
+              </div>
+              <div class='text-center'>
+                <button
+                  type='submit'
+                  class='btn btn-lg bg-danger text-white mt-3 mb-0'
+                >Unlock</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <button type='submit' class='btn btn-primary'>Login</button>
-</form>
+</main>

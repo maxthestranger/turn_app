@@ -1,48 +1,46 @@
 const express = require('express');
 const router = express.Router();
-
+const Admin = require('../models/admin');
 const bcrypt = require('bcrypt');
-
-const users = [];
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('admin/index', { title: 'Express' });
+  res.render('admin/index', { title: 'Admin Login', layout: 'adminLayout' });
 });
 
-// get register page
-router.get('/register', function (req, res, next) {
-  // res.render('admin/register', { title: 'Express' });
-  res.send(users);
+/* GET dashboard page. */
+router.get('/dashboard', function (req, res, next) {
+  res.render('admin/home', { title: 'Admin Login', layout: 'adminLayout' });
 });
 
-// register admin
-router.post('/register', async (req, res) => {
-  try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const user = { name: req.body.username, password: hashedPassword };
-    users.push(user);
-    // res.redirect('/');
-    res.status(201).send();
-  } catch {
-    res.status(500).send();
-  }
-});
+// // register admin
+// router.post('/register', async (req, res) => {
+//   try {
+//     const hashedPassword = await bcrypt.hash(req.body.password, 10);
+//     const admin = new Admin({
+//       password: hashedPassword,
+//     });
+//     const newAdmin = await admin.save();
+//     res.redirect('/');
+//   } catch (error) {
+//     // res.rendor('/', {
+//     //   errorMessage: 'Error creating',
+//     // });
+//     console.log(error);
+//   }
+// });
 
 router.post('/login', async (req, res) => {
-  const user = users.find((user) => (user.username = req.body.name));
-  if (user == null) {
-    return res.status(400).send('Cannot find user');
-  }
-
   try {
-    if (await bcrypt.compare(req.body.password, user.password)) {
-      res.send('Success');
+    const admin = await Admin.password;
+    if (await bcrypt.compare(req.body.password, admin)) {
+      res.redirect('/dashboard');
     } else {
-      res.send('Not Allowed');
+      res.redirect('/');
     }
-  } catch {
-    res.status(500).send();
+  } catch (err) {
+    // res.status(500).send();
+    console.log(err);
   }
 });
 
