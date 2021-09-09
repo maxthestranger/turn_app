@@ -21,6 +21,35 @@ router.get('/dashboard', function (req, res, next) {
   res.render('admin/home', { title: 'Admin Login', layout: 'adminLayout' });
 });
 
+/* GET orders page. */
+router.get('/orders', function (req, res, next) {
+  res.render('admin/orders', { title: 'Admin Orders', layout: 'adminLayout' });
+});
+
+/* GET pending page. */
+router.get('/pending', function (req, res, next) {
+  res.render('admin/pending', {
+    title: 'Admin Pending',
+    layout: 'adminLayout',
+  });
+});
+
+/* GET archive page. */
+router.get('/archive', function (req, res, next) {
+  res.render('admin/archive', {
+    title: 'Admin Archive',
+    layout: 'adminLayout',
+  });
+});
+
+/* GET orders page. */
+router.get('/declined', function (req, res, next) {
+  res.render('admin/declined', {
+    title: 'Admin Declined',
+    layout: 'adminLayout',
+  });
+});
+
 // // register admin
 // router.post('/register', async (req, res) => {
 //   try {

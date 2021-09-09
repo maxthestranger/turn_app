@@ -1,0 +1,116 @@
+<!-- Begin page -->
+<div class='wrapper'>
+  {{> adminLeftBar }}
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class='content-page'>
+    <div class='content'>
+      {{> adminHeader }}
+
+      <!-- Start Content-->
+      <div class='container-fluid'>
+
+        <!-- start page title -->
+        <div class='row'>
+          <div class='col-12'>
+            <div class='page-title-box'>
+              <div class='page-title-right'>
+                <form class='d-flex'></form>
+              </div>
+              <h4 class='page-title'>All Declined Events</h4>
+            </div>
+          </div>
+        </div>
+        <!-- end page title -->
+
+        <div class='row'>
+          <div class='col-12'>
+            <div class='card'>
+              <div class='card-body'>
+                <div class='table-responsive'>
+                  <div
+                    id='products-datatable_wrapper'
+                    class='dataTables_wrapper dt-bootstrap5 no-footer'
+                  ><div class='row'><div class='col-sm-12'>
+                        <table
+                          class='table table-hover table-bordered border-dark table-centered mb-0'
+                        >
+                          <thead>
+                            <tr>
+                              <th>Event Name</th>
+                              <th>Organiser</th>
+                              <th>Phone</th>
+                              <th>Email</th>
+                              <th>Venue</th>
+                              <th>Tickets Sold</th>
+                              <th>Created Date</th>
+                              <th class='text-center'>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class='table-user'>
+                                Risa D. Pearson
+                              </td>
+                              <td>Kamusi Kuu</td>
+                              <td>07283737474</td>
+                              <td>ashdjhasgdgg@bidif.com</td>
+                              <td>Nairobi Rescors</td>
+                              <td>345</td>
+                              <td>Sep 15th, 21</td>
+                              <td class='table-action text-center'>
+                                <a
+                                  href='javascript: void(0);'
+                                  class='btn btn-sm btn-danger'
+                                > <i class='mdi mdi-delete'></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class='table-user'>
+                                Risa D. Pearson
+                              </td>
+                              <td>Kamusi Kuu</td>
+                              <td>07283737474</td>
+                              <td>ashdjhasgdgg@bidif.com</td>
+                              <td>Nairobi Rescors</td>
+                              <td>345</td>
+                              <td>Sep 15th, 21</td>
+                              <td class='table-action text-center'>
+                                <a
+                                  href='javascript: void(0);'
+                                  class='btn btn-sm btn-danger'
+                                > <i class='mdi mdi-delete'></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div></div></div>
+                </div>
+              </div>
+              <!-- end card-body-->
+            </div>
+            <!-- end card-->
+          </div>
+          <!-- end col -->
+        </div>
+
+      </div>
+      <!-- container -->
+
+    </div>
+    <!-- content -->
+
+    {{> adminFooter }}
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->
