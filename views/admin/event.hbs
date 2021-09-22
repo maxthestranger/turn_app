@@ -1,0 +1,130 @@
+<!-- Begin page -->
+<div class='wrapper' style='height: auto;'>
+  {{> adminLeftBar }}
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class='content-page'>
+    <div class='content'>
+      {{> adminHeader }}
+
+      <!-- Start Content-->
+      <div class='container-fluid'>
+        <div class='row my-2 pt-2'>
+          <div class='col-lg-12'>
+            <a
+              href='dashboard'
+              class='text-dark'
+              style='cursor: pointer !important;'
+            ><span><i class='uil-arrow-left'></i> Back to Home</span></a>
+          </div>
+        </div>
+
+        <!-- start page title -->
+        <div class='row'>
+          <div class='col-12'>
+            <div class='page-title-box mb-2'>
+              <div class='page-title-right'>
+                <form class='d-flex'></form>
+              </div>
+              <h3 class='mt-0'>Event Name Statistics</h3>
+              <p class="mb-1">Take a quick look how your event is going</p>
+            </div>
+          </div>
+        </div>
+        <!-- end page title -->
+
+        <div class='row'>
+          <div class='col-lg-4'>
+            <div class='row g-0'>
+              <div class='col-md-6'>
+                <div class='card shadow-none m-0 border-bottom'>
+                  <div class='card-body text-center'>
+
+                    <h3><span>29</span></h3>
+                    <p class='text-muted font-15 mb-0'>Tickets Sold</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-md-6'>
+                <div class='card shadow-none m-0 border-start'>
+                  <div class='card-body text-center'>
+
+                    <h3><span>715</span></h3>
+                    <p class='text-muted font-15 mb-0'>Tickets Left</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-md-6'>
+                <div class='card shadow-none m-0 border-start'>
+                  <div class='card-body text-center'>
+
+                    <h3><span>Ksh. 12,000</span></h3>
+                    <p class='text-muted font-15 mb-0'>Gross Amount Made</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-md-6'>
+                <div class='card shadow-none m-0 border-start'>
+                  <div class='card-body text-center'>
+
+                    <h3><span>11,000</span> </h3>
+                    <p class='text-muted font-15 mb-0'>Net Amount Made</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class='col-lg-8'>
+            <div class='table-responsive mt-4'>
+              <table class='table table-bordered table-centered mb-0'>
+                <thead class='table-light'>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Name</th>
+                    <th>Ticket Type</th>
+                    <th>Quantity</th>
+                    <th>Amount Paid</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#TA9038HJ44</td>
+                    <td>Charles Wadu</td>
+                    <td>VIP</td>
+                    <td>
+                      2
+                    </td>
+                    <td>2,500</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- container -->
+
+    </div>
+    <!-- content -->
+
+    {{> adminFooter }}
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->

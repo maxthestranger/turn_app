@@ -1,0 +1,421 @@
+<!-- Begin page -->
+<div class='wrapper' style='height: auto;'>
+  {{> adminLeftBar }}
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class='content-page'>
+    <div class='content'>
+      {{> adminHeader }}
+
+      <!-- Start Content-->
+      <div class='container-fluid'>
+        <div class='row my-2 pt-2'>
+          <div class='col-lg-12'>
+            <a
+              href='dashboard'
+              class='text-dark'
+              style='cursor: pointer !important;'
+            ><span><i class='uil-arrow-left'></i> Back to Home</span></a>
+          </div>
+        </div>
+
+        <!-- start page title -->
+        <div class='row'>
+          <div class='col-12'>
+            <div class='page-title-box'>
+              <div class='page-title-right'>
+                <form class='d-flex'></form>
+              </div>
+              <h4 class='page-title'>Create a new event</h4>
+            </div>
+          </div>
+        </div>
+        <!-- end page title -->
+
+        <form class='row' action='' method='POST'>
+          <div class='col-lg-7'>
+            <div class='card'>
+              <div class='card-body border-0 shadow-sm p-4 mb-4'>
+                <h2 class='h4 mb-4'>
+                  <i
+                    class='uil-info-circle text-primary fs-5 mt-n1 me-2'
+                  ></i>Organiser Details
+                </h2>
+                <div class='row g-3'>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='orgName'>Event Owner
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      type='text'
+                      name='orgName'
+                      class='form-control'
+                      placeholder='person, company, business etc'
+                    />
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <label class='form-label' for='orgEmail'>Email
+                      <span class='text-danger'>*</span></label>
+                    <input type='email' name='orgEmail' class='form-control' />
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <label class='form-label' for='orgPhone'>Phone
+                      <span class='text-danger'>*</span></label>
+                    <input type='tel' name='orgPhone' class='form-control' />
+                  </div>
+                </div>
+              </div>
+              <!-- end card-body-->
+            </div>
+            <!-- end card-->
+
+            <div class='card'>
+              <div class='card-body border-0 shadow-sm p-4 mb-4'>
+                <h2 class='h4 mb-4'>
+                  <i
+                    class='uil-info-circle text-primary fs-5 mt-n1 me-2'
+                  ></i>Event Details
+                </h2>
+                <div class='row g-3'>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntName'>Event Name
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      type='text'
+                      name='evntName'
+                      class='form-control'
+                      placeholder='person, company, business etc'
+                    />
+                  </div>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntCategory'>Event Category
+                      <span class='text-danger'>*</span></label>
+                    <select
+                      class='form-control select2'
+                      name='evntCategory'
+                      id='evntCategory'
+                      data-toggle='select2'
+                    >
+                      <option selected disabled>Select event Category</option>
+                      <option value='parties'>Parties</option>
+                      <option value='clubs'>Clubs</option>
+                      <option value='nightlife'>Nightlife</option>
+                      <option value='festivals'>Festivals</option>
+                      <option value='roadtrips'>Road Trips</option>
+                      <option value='events'>Events</option>
+                      <option value='concerts'>Concerts</option>
+                      <option value='raves'>Raves</option>
+                      <option value='camping'>Camping</option>
+                      <option value='retreats'>Reatreats</option>
+                    </select>
+                  </div>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntDesc'>Description
+                      <span class='text-danger'>*</span></label>
+                    <textarea
+                      class='form-control'
+                      name='evntDesc'
+                      id='evntDesc'
+                      rows='5'
+                    ></textarea>
+                  </div>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntVenue'>Venue
+                      <span class='text-danger'>*</span></label>
+                    <input type='tel' name='evntVenue' class='form-control' />
+                  </div>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntLineup'>LineUp
+                      <span class='text-sm text-muted'>(Names separated by
+                        commas)</span>
+                      <span class='text-danger'>*</span></label>
+                    <input type='text' name='evntLineup' class='form-control' />
+                  </div>
+                  <div class='col-md-12 my-2'>
+                    <label class='form-label' for='evntUrl'>Youtube Url or
+                      Website Link
+                      <span class='text-danger'>*</span></label>
+                    <input type='text' name='evntUrl' class='form-control' />
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <div id='datepicker1' class='position-relative'>
+                      <label class='form-label' for='evntStartDate'>Start Date
+                        <span class='text-danger'>*</span>
+                      </label>
+                      <input
+                        type='text'
+                        name='evntStartDate'
+                        class='form-control'
+                        data-provide='datepicker'
+                        data-date-container='#datepicker1'
+                        data-date-format='d-M-yyyy'
+                        data-date-autoclose='true'
+                      />
+                    </div>
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <div id='datepicker2' class='position-relative'>
+                      <label class='form-label' for='evntEndDate'>End Date
+                        <span class='text-danger'>*</span>
+                      </label>
+                      <input
+                        type='text'
+                        name='evntEndDate'
+                        class='form-control'
+                        data-provide='datepicker'
+                        data-date-container='#datepicker2'
+                        data-date-format='d-M-yyyy'
+                        data-date-autoclose='true'
+                      />
+                    </div>
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <div id='timepicker1' class='position-relative'>
+                      <label class='form-label' for='timepicker1'>Start Time
+                        <span class='text-danger'>*</span>
+                      </label>
+                      <input
+                        id='timepicker1'
+                        name='evntStartTime'
+                        type='text'
+                        class='form-control'
+                        data-provide='timepicker'
+                      />
+                    </div>
+                  </div>
+                  <div class='col-md-6 my-2'>
+                    <div id='evntEndTime' class='position-relative'>
+                      <label class='form-label' for='evntEndTime'>Start Time
+                        <span class='text-danger'>*</span>
+                      </label>
+                      <input
+                        id='evntEndTime'
+                        name='evntEndTime'
+                        type='text'
+                        class='form-control'
+                        data-provide='timepicker'
+                      />
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class='col-md-12'>
+                    <div class='mb-3 mt-3 mt-xl-0'>
+                      <label for='projectname' class='mb-0'>Avatar</label>
+                      <p class='text-muted font-14'>Recommended thumbnail size
+                        800x400 (px).</p>
+
+                      <!-- File Upload -->
+                      <form
+                        action='/'
+                        method='post'
+                        class='dropzone'
+                        id='myAwesomeDropzone'
+                        data-plugin='dropzone'
+                        data-previews-container='#file-previews'
+                        data-upload-preview-template='#uploadPreviewTemplate'
+                      >
+                        <div class='fallback'>
+                          <input name='file' type='file' multiple />
+                        </div>
+
+                        <div class='dz-message needsclick'>
+                          <i class='h1 text-muted dripicons-cloud-upload'></i>
+                          <h3>Drop files here or click to upload.</h3>
+                          <span class='text-muted font-13'>(This is just a demo
+                            dropzone. Selected files are
+                            <strong>not</strong>
+                            actually uploaded.)</span>
+                        </div>
+                      </form>
+
+                      <!-- Preview -->
+                      <div
+                        class='dropzone-previews mt-3'
+                        id='file-previews'
+                      ></div>
+
+                      <!-- file preview template -->
+                      <div class='d-none' id='uploadPreviewTemplate'>
+                        <div class='card mt-1 mb-0 shadow-none border'>
+                          <div class='p-2'>
+                            <div class='row align-items-center'>
+                              <div class='col-auto'>
+                                <img
+                                  data-dz-thumbnail
+                                  src='#'
+                                  class='avatar-sm rounded bg-light'
+                                  alt=''
+                                />
+                              </div>
+                              <div class='col ps-0'>
+                                <a
+                                  href='javascript:void(0);'
+                                  class='text-muted fw-bold'
+                                  data-dz-name
+                                ></a>
+                                <p class='mb-0' data-dz-size></p>
+                              </div>
+                              <div class='col-auto'>
+                                <!-- Button -->
+                                <a
+                                  href=''
+                                  class='btn btn-link btn-lg text-muted'
+                                  data-dz-remove
+                                >
+                                  <i class='dripicons-cross'></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end file preview template -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card-body-->
+            </div>
+
+            <div class='card'>
+              <div class='card-body border-0 shadow-sm p-4 mb-4'>
+                <h2 class='h4 mb-4'>
+                  <i
+                    class='uil-info-circle text-primary fs-5 mt-n1 me-2'
+                  ></i>Ticket Details
+                </h2>
+                <div class='row g-3'>
+                  <div class='col-md-6'>
+                    <label class='form-label' for='ticket1'>Ticket 1
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='text' name='ticket1' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='price1'>Price 1
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='number' name='price1' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='quantity1'>No of Tickets
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      class='form-control'
+                      type='number'
+                      name='quantity1'
+                    />
+                  </div>
+
+                  <div class='col-md-6'>
+                    <label class='form-label' for='ticket2'>Ticket 2
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='text' name='ticket2' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='price2'>Price 2
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='number' name='price2' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='quantity2'>No of Tickets
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      class='form-control'
+                      type='number'
+                      name='quantity2'
+                    />
+                  </div>
+
+                  <div class='col-md-6'>
+                    <label class='form-label' for='ticket3'>Ticket 3
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='text' name='ticket3' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='price3'>Price 3
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='number' name='price3' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='quantity3'>No of Tickets
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      class='form-control'
+                      type='number'
+                      name='quantity3'
+                    />
+                  </div>
+
+                  <div class='col-md-6'>
+                    <label class='form-label' for='ticket4'>Ticket 4
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='text' name='ticket4' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='price4'>Price 4
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='number' name='price4' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='quantity4'>No of Tickets
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      class='form-control'
+                      type='number'
+                      name='quantity4'
+                    />
+                  </div>
+
+                  <div class='col-md-6'>
+                    <label class='form-label' for='ticket5'>Ticket 5
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='text' name='ticket5' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='price5'>Price 5
+                      <span class='text-danger'>*</span></label>
+                    <input class='form-control' type='number' name='price5' />
+                  </div>
+                  <div class='col-md-3'>
+                    <label class='form-label' for='quantity5'>No of Tickets
+                      <span class='text-danger'>*</span></label>
+                    <input
+                      class='form-control'
+                      type='number'
+                      name='quantity5'
+                    />
+                  </div>
+
+                </div>
+              </div>
+              <!-- end card-body-->
+            </div>
+
+            <div class='card card-body border-0 shadow-sm p-4 mb-4'>
+              <button class='btn btn-primary btn-lg d-block mb-2'>
+                Publish
+              </button>
+            </div>
+
+          </div>
+          <!-- end col -->
+        </form>
+
+      </div>
+      <!-- container -->
+
+    </div>
+    <!-- content -->
+
+    {{> adminFooter }}
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->

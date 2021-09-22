@@ -50,6 +50,22 @@ router.get('/declined', function (req, res, next) {
   });
 });
 
+/* GET addEvent page. */
+router.get('/addEvent', function (req, res, next) {
+  res.render('admin/addEvent', {
+    title: 'Admin Add Event',
+    layout: 'adminLayout',
+  });
+});
+
+/* GET addEvent page. */
+router.get('/event', function (req, res, next) {
+  res.render('admin/event', {
+    title: 'Admin Event Details',
+    layout: 'adminLayout',
+  });
+});
+
 // // register admin
 // router.post('/register', async (req, res) => {
 //   try {
